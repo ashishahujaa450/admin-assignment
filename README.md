@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. download the above zip file by clicking on 'Download Zip'
 2. extract the application on your local machine
-3. open terimal or cmd in the project folder & run command `ng install` & wait for dependencies to be installed
+3. open terimal or cmd in the project folder & run command `npm install` & wait for dependencies to be installed
 4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Development server
