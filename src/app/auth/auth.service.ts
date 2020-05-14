@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 
 import { throwError, BehaviorSubject } from "rxjs";
-import { catchError, tap, map } from "rxjs/operators";
+import { catchError, tap } from "rxjs/operators";
 
 import { environment } from "src/environments/environment";
 
