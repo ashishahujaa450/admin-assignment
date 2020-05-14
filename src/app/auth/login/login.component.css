@@ -1,0 +1,41 @@
+button[disabled] {
+  cursor: not-allowed;
+}
+
+input.ng-invalid.ng-touched {
+  background-image: linear-gradient(#dc3545, #dc3545),
+    linear-gradient(rgba(120, 130, 140, 0.13), rgba(120, 130, 140, 0.13));
+  transition: none;
+  background-size: 100% 2px;
+}
+
+.login-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #edf1f5;
+}
+
+.container {
+  background: #edf1f5;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.inner-mod-wrapper {
+  background: #fff;
+  padding: 1rem 2rem;
+  margin-top: 5rem;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  cursor: pointer;
+}

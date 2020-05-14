@@ -1,0 +1,95 @@
+<div class="login-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-xs-12 col-md-offset-3">
+        <div *ngIf="isLoading">
+          <app-loading-spinner></app-loading-spinner>
+        </div>
+
+        <div class="inner-mod-wrapper" *ngIf="!isLoading">
+          <div *ngIf="errorMessage && !isLoading">
+            <app-error [message]="errorMessage"></app-error>
+          </div>
+
+          <h1 class="text-center">{{ isLogin ? "Login" : "Sign up" }}</h1>
+          <div class="white-box">
+            <form
+              class="form-horizontal form-material"
+              #authForm="ngForm"
+              (ngSubmit)="onSubmit(authForm)"
+            >
+              <div class="form-group" *ngIf="!isLogin">
+                <label class="col-md-12">Full Name</label>
+                <div class="col-md-12">
+                  <input
+                    type="text"
+                    placeholder="Johnathan Doe"
+                    class="form-control form-control-line"
+                    id="fullName"
+                    name="userName"
+                    ngModel
+                    required
+                  />
+                </div>
+              </div>
+              <!--end form group-->
+              <div class="form-group">
+                <label for="example-email" class="col-md-12">Email</label>
+                <div class="col-md-12">
+                  <input
+                    type="email"
+                    placeholder="johnathan@admin.com"
+                    class="form-control form-control-line"
+                    id="example-email"
+                    name="userEmail"
+                    required
+                    email
+                    ngModel
+                  />
+                </div>
+              </div>
+              <!--end form group-->
+              <div class="form-group">
+                <label class="col-md-12">Password</label>
+                <div class="col-md-12">
+                  <input
+                    type="password"
+                    class="form-control form-control-line"
+                    id="pwd"
+                    name="userPwd"
+                    ngModel
+                    required
+                  />
+                </div>
+              </div>
+              <!--end form group-->
+
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <div class="d-flex">
+                    <button
+                      class="btn btn-success"
+                      [disabled]="authForm.invalid"
+                    >
+                      {{ isLogin ? "Login" : "Sign up" }}
+                    </button>
+                    <a (click)="toggleState()">{{
+                      isLogin
+                        ? "Create new Account?"
+                        : "Already have an Account?"
+                    }}</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--end inner wrapper-->
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+  </div>
+  <!--end container-->
+</div>
+<!--end login wrapper-->
